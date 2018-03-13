@@ -21,10 +21,14 @@ master： hostnamectl set-hostname k8s-master
 node：   hostnamectl set-hostname k8s-node
 
 vim /etc/hosts
+
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-192.168.1.191 k8s-master
-192.168.1.192 k8s-node
+
+192.168.1.192 k8s-master
+
+192.168.1.193 k8s-node
 
 
 ## 安装软件
