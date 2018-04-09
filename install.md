@@ -18,6 +18,7 @@
 ### 修改主机名和配置主机映射
 
 master： hostnamectl set-hostname k8s-master
+
 node：   hostnamectl set-hostname k8s-node
 
 vim /etc/hosts
@@ -68,45 +69,45 @@ systemctl start kubelet && systemctl enable kubelet
 镜像放在百度云链接: https://pan.baidu.com/s/1rasoi9A 密码：8i5x
 
 1）master端镜像
-gcr.io/google_containers/kube-apiserver-amd64  			 v1.9.1     
+gcr.io/google_containers/kube-apiserver-amd64:v1.9.1 
   
-gcr.io/google_containers/kube-scheduler-amd64            v1.9.1
+gcr.io/google_containers/kube-scheduler-amd64:v1.9.1
   
-gcr.io/google_containers/kube-proxy-amd64                v1.9.1  
+gcr.io/google_containers/kube-proxy-amd64:v1.9.1  
 
-gcr.io/google_containers/kube-controller-manager-amd64   v1.9.1
+gcr.io/google_containers/kube-controller-manager-amd64:v1.9.1
     
-quay.io/coreos/flannel                                   v0.9.1-amd64
+quay.io/coreos/flannel:v0.9.1-amd64
    
-gcr.io/google_containers/k8s-dns-sidecar-amd64           1.14.7
+gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.7
 
-gcr.io/google_containers/k8s-dns-kube-dns-amd64          1.14.7
+gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.7
 
-gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64     1.14.7 
+gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.7 
 
-gcr.io/google_containers/etcd-amd64                      3.1.10   
+gcr.io/google_containers/etcd-amd64:3.1.10   
 
-gcr.io/google_containers/pause-amd64					 3.0
+gcr.io/google_containers/pause-amd64:3.0
 
 2）node端镜像
 
-gcr.io/google_containers/kube-apiserver-amd64  			 v1.9.1
+gcr.io/google_containers/kube-apiserver-amd64:v1.9.1
 
-quay.io/coreos/flannel                                   v0.9.1-amd64
+quay.io/coreos/flannel:v0.9.1-amd64
 
-gcr.io/google_containers/etcd-amd64                      3.1.10
+gcr.io/google_containers/etcd-amd64:3.1.10
 
-gcr.io/google_containers/pause-amd64                  	 3.0
+gcr.io/google_containers/pause-amd64:3.0
 
-gcr.io/google_containers/kube-proxy-amd64            	 v1.9.1
+gcr.io/google_containers/kube-proxy-amd64:v1.9.1
 
-gcr.io/google_containers/kubernetes-dashboard-amd64		 v1.9.0
+gcr.io/google_containers/kubernetes-dashboard-amd64:v1.9.0
 
-docker.io/wanghkkk/heapster-influxdb-amd64-v1.3.3		 v1.3.3
+docker.io/wanghkkk/heapster-influxdb-amd64-v1.3.3:v1.3.3
 
-docker.io/wanghkkk/heapster-grafana-amd64-v4.4.3       	 v4.4.3
+docker.io/wanghkkk/heapster-grafana-amd64-v4.4.3:v4.4.3
 
-docker.io/wanghkkk/heapster-amd64-v1.4.0				 v1.4.0
+docker.io/wanghkkk/heapster-amd64-v1.4.0:v1.4.0
 
 
 ## kubeadm进行初始化
