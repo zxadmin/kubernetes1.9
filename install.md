@@ -69,6 +69,7 @@ systemctl start kubelet && systemctl enable kubelet
 镜像放在百度云链接: https://pan.baidu.com/s/1rasoi9A 密码：8i5x
 
 1）master端镜像
+
 gcr.io/google_containers/kube-apiserver-amd64:v1.9.1 
   
 gcr.io/google_containers/kube-scheduler-amd64:v1.9.1
