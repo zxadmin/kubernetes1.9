@@ -1,5 +1,9 @@
 ## 安装Dashboard插件
 
+wget https://raw.githubusercontent.com/zxadmin/kubernetes1.9/master/dashboard/kubernetes-dashboard-admin.rbac.yaml
+
+wget https://raw.githubusercontent.com/zxadmin/kubernetes1.9/master/dashboard/kubernetes-dashboard.yaml
+
 kubectl create -f kubernetes-dashboard.yaml
 
 kubectl create -f kubernetes-dashboard-admin.rbac.yaml
