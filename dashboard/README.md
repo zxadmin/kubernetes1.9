@@ -62,6 +62,18 @@ kubernetes-dashboard   NodePort    10.109.204.64   <none>        443:32611/TCP  
 
 ### 部署heapster插件
 
+[root@k8s-master ~]# mkdir heapster
+
+[root@k8s-master ~]# cd heapster
+
+[root@k8s-master heapster]# wget https://raw.githubusercontent.com/zxadmin/kubernetes1.9/master/dashboard/heapster/grafana.yaml
+
+[root@k8s-master heapster]# wget https://github.com/zxadmin/kubernetes1.9/blob/master/dashboard/heapster/heapster-rbac.yaml
+
+[root@k8s-master heapster]# wget https://raw.githubusercontent.com/zxadmin/kubernetes1.9/master/dashboard/heapster/heapster.yaml
+
+[root@k8s-master heapster]# wget https://github.com/zxadmin/kubernetes1.9/blob/master/dashboard/heapster/influxdb.yaml
+
 [root@k8s-master heapster]# ls
 
 grafana.yaml  heapster-rbac.yaml  heapster.yaml  influxdb.yaml
