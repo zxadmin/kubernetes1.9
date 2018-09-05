@@ -41,3 +41,22 @@ This node has joined the cluster:
 * The Kubelet was informed of the new secure connection details.
 
 Run 'kubectl get nodes' on the master to see this node join the cluster
+
+
+
+
+[kubelet-check] The HTTP call equal to 'curl -sSL http://localhost:10255/healthz' failed with error: Get http://localhost:10255/healthz: dial tcp [::1]:10255: getsockopt: connection refused
+
+
+
+
+
+解决办法:
+
+vim /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+
+Environment="KUBELET_SYSTEM_PODS_ARGS=--pod-manifest-path=/etc/kubernetes/manifests --allow-privileged=true --fail-swap-on=false"
+
+
+
+
