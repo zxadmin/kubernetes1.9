@@ -16,7 +16,7 @@ FATA[0000] listing containers failed: rpc error: code = Unavailable desc = grpc:
 
 crictl version 1.11.0
 
-[root@k8s-node ~]# kubeadm join 192.168.1.191:6443 --token orzxom.mmqfhs7cijp1koao **--nore-preflight-errors=cri** --discovery-token-ca-cert-hash sha256:8eb5c04ab1fc77cc76c33d09a6ac40aca527f3c7bdda6fb8e1df348d2473be99
+[root@k8s-node ~]# kubeadm join 192.168.1.191:6443 --token orzxom.mmqfhs7cijp1koao **--ignore-preflight-errors cri** --discovery-token-ca-cert-hash sha256:8eb5c04ab1fc77cc76c33d09a6ac40aca527f3c7bdda6fb8e1df348d2473be99
 
 [preflight] Running pre-flight checks.
 
