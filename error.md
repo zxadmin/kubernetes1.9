@@ -57,10 +57,20 @@ Run 'kubectl get nodes' on the master to see this node join the cluster
 
 解决办法:
 
+cgroup driver配置要相同
+
+查看docker cgroup driver:
+
+docker info|grep Cgroup
+
+有systemd和cgroupfs两种，把kubelet service配置改成与docker一致
+
+
+
 vim /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 
 Environment="KUBELET_SYSTEM_PODS_ARGS=--pod-manifest-path=/etc/kubernetes/manifests --allow-privileged=true --fail-swap-on=false"
 
-
+KUBELET_CGROUP_ARGS=--cgroup-driver=cgroupfs #这个配置与docker改成一致
 
 
