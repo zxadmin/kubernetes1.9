@@ -45,6 +45,10 @@ Run 'kubectl get nodes' on the master to see this node join the cluster
 
 
 
+
+
+# 初始化失败报错
+
 [kubelet-check] The HTTP call equal to 'curl -sSL http://localhost:10255/healthz' failed with error: Get http://localhost:10255/healthz: dial tcp [::1]:10255: getsockopt: connection refused
 
 
