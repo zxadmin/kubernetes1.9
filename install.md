@@ -182,6 +182,9 @@ kubernetes-dashboard-5d6bd74468-8jr9x   1/1       Running   2          2h
 
 检查下kube-dns是否安装成功。kube-dns比较重要，它负责整个集群的解析，要确保它正常运行。
 
+查看报错的pod：
+
+kubectl describe -n kube-system pod   XXXX
 
 ## node节点部署
 
